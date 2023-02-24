@@ -41,7 +41,6 @@ Button(frame_btns,text="7",command=lambda:val_conta.set(val_conta.get()+"7"),wid
 Button(frame_btns,text="8",command=lambda:val_conta.set(val_conta.get()+"8"),width=3,height=2).grid(column=3,row=1)
 Button(frame_btns,text="9",command=lambda:val_conta.set(val_conta.get()+"9"),width=3,height=2).grid(column=4,row=1)
 
-
 #Operações - Botões
 Button(frame_btns,text="+",command=lambda:val_conta.set(val_conta.get()+" + "),width=3,height=2).grid_configure(column=5,row=0,padx=7)
 Button(frame_btns,text="-",command=lambda:val_conta.set(val_conta.get()+" - "),width=3,height=2).grid_configure(column=5,row=1)
