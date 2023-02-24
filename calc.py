@@ -53,10 +53,4 @@ btn_res.grid_configure(column=6,row=0)
 
 Button(frame_btns,text="C",command=lambda:val_conta.set(""),width=3,height=2).grid_configure(column=6,row=1)
 
-#Não funciona
-#Button(frame_btns,text="CE",command=lambda:conta.delete(),width=3,height=2).grid_configure(column=6,row=2)
-#Button(frame_btns,text="<-",command=lambda:val_conta.set(""),width=3,height=2).grid_configure(column=6,row=3)
-
-
-
 itfc.mainloop()
