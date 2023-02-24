@@ -1,4 +1,5 @@
 from tkinter import *
+import re
 
 def resultado():
     try:
@@ -14,6 +15,14 @@ def resultado():
         val_conta.set(res)
     except:
         return
+
+def apagar():
+    res = re.search(" +",val_conta.get())
+    conta.delete(res.end()+2,END)
+
+def bs():
+    cnt = len(val_conta.get())
+    conta.delete(cnt-1,END)
     
 itfc = Tk()
 itfc.title("Calculadora")
@@ -51,5 +60,7 @@ btn_res = Button(frame_btns,text="=",command=resultado,width=3,height=2)
 btn_res.grid_configure(column=6,row=0)
 
 Button(frame_btns,text="C",command=lambda:val_conta.set(""),width=3,height=2).grid_configure(column=6,row=1)
+Button(frame_btns,text="CE",command=apagar,width=3,height=2).grid_configure(column=6,row=2)
+Button(frame_btns,text="<-",command=bs,width=3,height=2).grid_configure(column=6,row=3)
 
 itfc.mainloop()
